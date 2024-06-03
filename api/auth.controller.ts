@@ -1,6 +1,5 @@
 import { RequestHolder } from './requestHolder';
 import playwrightConfig from '../playwright.config';
-// import type { LoginResponse, UserCreateRequest, UserCreatedResponse } from './models';
 import type { LoginResponse } from './models/auth.interfaces';
 
 export class AuthController extends RequestHolder {
