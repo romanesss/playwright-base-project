@@ -1,0 +1,20 @@
+{
+    "name": "playwright_soucedemo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint . --ext .ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@playwright/test": "^1.44.1",
+        "@types/node": "^20.13.0",
+        "@typescript-eslint/eslint-plugin": "^7.11.0",
+        "@typescript-eslint/parser": "^7.11.0",
+        "dotenv": "^16.4.5",
+        "eslint": "^8.57.0"
+    }
+}
