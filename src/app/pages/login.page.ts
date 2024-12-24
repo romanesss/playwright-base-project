@@ -1,10 +1,10 @@
-import { BasePage } from '../basePage';
+import { BasePage } from '../base/basePage';
 
 export class Login extends BasePage {
-    public pagePath = '/login';
+    public url = '/login';
 
     private emailInput = this.page.getByRole('main').getByPlaceholder('Please Enter Your Email');
-    private passwordInput = this.page.getByPlaceholder('Please Enter Your Password')
+    private passwordInput = this.page.getByPlaceholder('Please Enter Your Password');
     private loginBtn = this.page.getByRole('button', { name: 'Login' });
 
     async login(credentials: { email: string; password: string }) {
