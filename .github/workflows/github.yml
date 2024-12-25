@@ -19,8 +19,8 @@ jobs:
               run: npm ci
             - name: Create .env
               run: |
-                touch .env
-                echo TESTOMATIO=${{ secrets.TESTOMATIO }} >> .env
-                cat .env
+                  touch .env
+                  echo TESTOMATIO=${{ secrets.TESTOMATIO }} >> .env
+                  cat .env
             - name: e2e
               run: npx playwright test

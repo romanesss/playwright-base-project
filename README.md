@@ -4,6 +4,7 @@ This repository contains a basic Playwright project setup to serve as a starting
 The structure and configurations provided here can be used to build scalable and maintainable test suites.
 
 # Configured reporter: [Testomat.io](https://app.testomat.io/)
+
 ![image](https://github.com/user-attachments/assets/f1319083-1774-4dbc-a9c8-b726fd1caf99)
 
 # Preconditions
@@ -24,6 +25,3 @@ To install all dependencies , use the following command:
 To run the tests, use the following command:
 
 - npx playwright test
-
-
-
