@@ -1,4 +1,4 @@
-import { RequestHolder } from './requestHolder';
+import { RequestHolder } from '../api/requestHolder';
 
 export class GitHubApiHelpers extends RequestHolder {
     async forkRepository(): Promise<void> {
