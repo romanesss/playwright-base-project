@@ -24,3 +24,8 @@ jobs:
                   cat .env
             - name: e2e
               run: npx playwright test
+            - uses: actions/upload-artifact@v4
+              if: ${{ !cancelled() }}
+              with:
+                  name: playwright-traces
+                  path: test-results/
