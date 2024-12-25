@@ -1,5 +1,5 @@
 {
-    "name": "playwright_soucedemo",
+    "name": "playwright-base-project",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -27,6 +27,7 @@
         "@typescript-eslint/parser": "^7.11.0",
         "dotenv": "^16.4.5",
         "eslint": "^8.57.0",
-        "husky": "^8.0.0"
+        "husky": "^8.0.0",
+        "lint-staged": "^15.2.11"
     }
 }
