@@ -2,8 +2,8 @@ import { expect } from '@playwright/test';
 import { test } from '../../fixtures/baseFixture';
 import { registerResponseSchema } from '../../schemas/register.schema';
 
-test.describe('POST: /register', () => {
-    test('successful register should return valid code', async ({ app: { api }, faker }) => {
+test.describe('POST: /register @Sb1a8822b', () => {
+    test('successful register should return valid code @T3f162fe4', async ({ app: { api }, faker }) => {
         const response = await api.authController.register({
             isSubscribed: false,
             email: faker.internet.email(),
@@ -14,7 +14,7 @@ test.describe('POST: /register', () => {
         expect((await response.json()).success).toBeTruthy();
     });
 
-    test('successful register should match valid JSON schema', async ({ app: { api }, faker, ajv }) => {
+    test('successful register should match valid JSON schema @T64c6bb04', async ({ app: { api }, faker, ajv }) => {
         const response = await api.authController.register({
             isSubscribed: false,
             email: faker.internet.email(),
@@ -28,7 +28,7 @@ test.describe('POST: /register', () => {
         expect(isValid).toBe(true);
     });
 
-    test('unsuccessful register with empty email should return 400 code', async ({ app: { api }, faker }) => {
+    test('unsuccessful register with empty email should return 400 code @Tb4372716', async ({ app: { api }, faker }) => {
         const response = await api.authController.register({
             isSubscribed: false,
             email: '',
