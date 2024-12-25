@@ -1,3 +1,3 @@
 import { PageHolder } from './pageHolder';
 
-export default abstract class BaseComponent extends PageHolder {}
+export abstract class BaseComponent extends PageHolder {}
