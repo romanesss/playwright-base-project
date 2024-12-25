@@ -1,10 +1,21 @@
 {
-    "name": "playwright_soucedemo",
+    "name": "playwright-base-project",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "lint": "eslint . --ext .ts"
+        "lint": "eslint . --ext .ts",
+        "prepare": "husky install"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{ts}": [
+            "npx prettier --write"
+        ]
     },
     "keywords": [],
     "author": "",
@@ -15,6 +26,8 @@
         "@typescript-eslint/eslint-plugin": "^7.11.0",
         "@typescript-eslint/parser": "^7.11.0",
         "dotenv": "^16.4.5",
-        "eslint": "^8.57.0"
+        "eslint": "^8.57.0",
+        "husky": "^8.0.0",
+        "lint-staged": "^15.2.11"
     }
 }
