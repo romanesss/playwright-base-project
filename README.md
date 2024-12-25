@@ -10,10 +10,6 @@ Before you begin, ensure you have the following installed on your system:
 -   [Node.js](https://nodejs.org/) (version 16 or higher)
 -   [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-## Project Structure
-
-/playwright-base-project ├── src/ │ ├── app/ │ ├── data/ │ ├── fixtures/ │ ├── helpers/ │ ├── models/ │ └── tests/ ├── package.json ├── playwright-report/ ├── playwright.config.ts ├── test-results.eslintignore ├── .eslintrc ├── .github/ ├── .gitignore ├── .prettierrc └── readme.m
-
 ## How to install all dependencies
 
 To install all dependencies , use the following command:
