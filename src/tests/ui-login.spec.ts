@@ -6,4 +6,5 @@ test('Ui login', async ({ page, app: { loginPage, shopPage } }) => {
     await loginPage.open();
     await loginPage.login(Credentials.getUserCredentials('standard'));
     expect(page.url()).toContain(shopPage.url);
+    await expect(shopPage.header.freeShoppingButton).toBeVisible();
 });
