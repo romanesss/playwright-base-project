@@ -5,7 +5,7 @@ import { Application } from '../app/application';
 type MyFixtures = {
     app: Application;
     gitHubApiHelpers: GitHubApiHelpers;
-
+    
 };
 
 export const test = base.extend<MyFixtures>({

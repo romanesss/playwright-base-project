@@ -5,7 +5,7 @@ import { APIHelpers } from '../helpers/api.helpers';
 
 export class Application extends PageHolder {
     public api = new APIHelpers(this.page.request);
-    
+
     public loginPage = new Login(this.page);
     public shopPage = new Inventory(this.page);
 
