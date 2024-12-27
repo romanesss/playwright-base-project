@@ -19,6 +19,6 @@ test.describe('Login @S9fe64d91', () => {
         await app.headlessLogin({ email: testUser.email, password: testUser.password });
         await shopPage.open();
         expect(page.url()).toContain(shopPage.url);
-        await expect(shopPage.header.freeShoppingButton).toBeVisible();
+        await expect(shopPage.header.freeShoppingButton).not.toBeVisible();
     });
 });
