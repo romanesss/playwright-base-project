@@ -6,6 +6,8 @@ The structure and configurations provided here can be used to build scalable and
 # Configured reporter: [Testomat.io](https://app.testomat.io/)
 
 ![image](https://github.com/user-attachments/assets/f1319083-1774-4dbc-a9c8-b726fd1caf99)
+![image](https://github.com/user-attachments/assets/c4611a80-497b-4128-bcaf-c665f93ae98f)
+
 
 # Preconditions
 
