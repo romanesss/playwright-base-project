@@ -2,7 +2,7 @@ import { expect } from '@playwright/test';
 import { test } from '../../fixtures/baseFixture';
 import { TestUser } from '../../models/test-user.model';
 
-test.describe('Register', () => {
+test.describe.only('Register', () => {
     let testUser: TestUser;
     test.beforeEach(async ({ app: { registerPage } }) => {
         await registerPage.open();
@@ -27,7 +27,7 @@ test.describe('Register', () => {
             email: testUser.email,
             password: faker.internet.password()
         });
-        await expect(registerPage.errorNotification.message).toHaveText('That email address is already in use.1');
+        await expect(registerPage.errorNotification.message).toHaveText('That email address is already in use.');
     });
 
     test(`verify inability to register with empty email`, async ({ faker, app: { registerPage } }) => {
