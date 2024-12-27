@@ -2,7 +2,7 @@ import { expect } from '@playwright/test';
 import { test } from '../../fixtures/baseFixture';
 import { TestUser } from '../../models/test-user.model';
 
-test.describe.only('Register', () => {
+test.describe('Register', () => {
     let testUser: TestUser;
     test.beforeEach(async ({ app: { registerPage } }) => {
         await registerPage.open();
