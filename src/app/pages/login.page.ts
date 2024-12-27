@@ -7,7 +7,7 @@ export class Login extends BasePage {
     public passwordInput = this.page.getByPlaceholder('Please Enter Your Password');
     public loginBtn = this.page.getByRole('button', { name: 'Login' });
 
-    async login(credentials: { email: string; password: string }) {
+    async login(credentials: { email: string; password: string }): Promise<void> {
         await this.emailInput.fill(credentials.email);
         await this.passwordInput.fill(credentials.password);
         await this.loginBtn.click();
