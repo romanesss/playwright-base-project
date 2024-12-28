@@ -22,8 +22,10 @@ jobs:
                   touch .env
                   echo TESTOMATIO=${{ secrets.TESTOMATIO }} >> .env
                   cat .env
+            - name: linter
+              run: npm run lint
             - name: e2e
-              run: npx playwright test
+              run: npm run test
             - uses: actions/upload-artifact@v4
               if: ${{ !cancelled() }}
               with:

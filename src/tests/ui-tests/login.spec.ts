@@ -2,7 +2,7 @@ import { expect } from '@playwright/test';
 import { test } from '../../fixtures/baseFixture';
 import { TestUser } from '../../models/test-user.model';
 
-test.describe('Login @S9fe64d91', () => {
+test.describe.only('login @S9fe64d91', () => {
     let testUser: TestUser;
     test.beforeEach(async ({ acceptanceHelpers }) => {
         testUser = await acceptanceHelpers.generateRandomUser();

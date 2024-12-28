@@ -4,8 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "lint": "eslint . --ext .ts",
-        "prepare": "husky install"
+        "lint": "npx eslint . --fix",
+        "prepare": "husky install",
+        "test": "npx playwright test"
     },
     "husky": {
         "hooks": {
@@ -21,6 +22,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@eslint/js": "^9.17.0",
         "@faker-js/faker": "^9.3.0",
         "@playwright/test": "^1.49.1",
         "@testomatio/reporter": "^1.6.10",
@@ -29,8 +31,11 @@
         "@typescript-eslint/parser": "^7.11.0",
         "ajv": "^8.17.1",
         "dotenv": "^16.4.7",
-        "eslint": "^8.57.0",
+        "eslint": "^8.57.1",
+        "eslint-plugin-playwright": "^2.1.0",
         "husky": "^8.0.0",
-        "lint-staged": "^15.2.11"
+        "lint-staged": "^15.2.11",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.18.2"
     }
 }
