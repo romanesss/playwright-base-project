@@ -1,29 +1,37 @@
-name: Default checks
+name: PR checks
 on:
     push:
         branches: [main, master]
+
     pull_request:
         branches: [main, master]
 jobs:
     playwright:
-        name: 'Playwright Tests'
+        name: 'PR checks'
         runs-on: ubuntu-latest
         container:
             image: mcr.microsoft.com/playwright:v1.49.1-noble
+
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
               with:
                   node-version: lts/*
+
             - name: Install dependencies
               run: npm ci
+
+            - name: Linter checks
+              run: npm run lint
+
             - name: Create .env
               run: |
                   touch .env
                   echo TESTOMATIO=${{ secrets.TESTOMATIO }} >> .env
                   cat .env
-            - name: e2e
-              run: npx playwright test
+            - name: Run playwright tests
+              run: npm run test
+
             - uses: actions/upload-artifact@v4
               if: ${{ !cancelled() }}
               with:
